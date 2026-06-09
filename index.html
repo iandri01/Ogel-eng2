@@ -277,6 +277,7 @@ section { padding: 80px 32px; }
 .vid-slide { display: none; }
 .vid-slide.active { display: block; }
 .vid-slide video { width: 100%; display: block; max-height: 420px; object-fit: cover; }
+.vid-slide img  { width: 100%; display: block; max-height: 420px; object-fit: cover; }
 .vid-caption { background: rgba(0,0,0,0.65); color: white; font-size: 13px; font-weight: 600; padding: 12px 16px; }
 .vid-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; color: white; font-size: 22px; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
 .vid-arrow:hover { background: var(--primary); }
@@ -563,7 +564,7 @@ footer span { font-weight: 700; color: var(--secondary); }
       <div class="feature-chip" style="background: var(--bg-warm); border: 1px solid var(--border);">
         <span class="chip-icon">💼</span>
         <div class="chip-text" style="color: var(--mid);">
-          <strong style="color:var(--dark)">While many shelters rely on public donations,</strong> Amy has spent years sustaining Omah Ogel through her own businesses — including <a href="https://www.instagram.com/dapur_ibu_amy" target="_blank" style="color:var(--primary); font-weight:700; text-decoration:none;">Dapur Ibu Amy</a> (catering), and <strong style="color:var(--dark)">Lilo Transpet & Petshop</strong> (pet-related services and animal transportation).
+          <strong style="color:var(--dark)">While many shelters rely on public donations,</strong> Amy has spent years sustaining Omah Ogel through her own businesses — including <a href="https://www.instagram.com/dapur_ibu_amy" target="_blank" style="color:var(--primary); font-weight:700; text-decoration:none;">Dapur Ibu Amy</a> (Catering Nasi Box), and <strong style="color:var(--dark)">Lilo Transpet & Petshop</strong> (pet-related services and animal transportation).
         </div>
       </div>
       <div class="feature-chip" style="background: var(--bg-warm); border: 1px solid var(--border);">
@@ -708,20 +709,35 @@ footer span { font-weight: 700; color: var(--secondary); }
     <div class="shelter-header fade-up">
       <span class="section-label">🏗️ The Design</span>
       <h2 class="section-title" style="color:var(--dark)">This Is What <span>Home</span> Will Look Like</h2>
-      <p class="section-desc" style="margin: 0 auto;">On a ±1,051 m² plot in Kalongliud Village, Nanggung, Bogor Regency — we are building a safe, humane, and permanent sanctuary for every animal who calls Omah Ogel home.</p>
+      <p class="section-desc" style="margin: 0 auto 20px;">On a ±1,051 m² plot in Kalongliud Village, Nanggung, Bogor Regency — we are building a safe, humane, and permanent sanctuary for every animal who calls Omah Ogel home.</p>
+      <p class="section-desc" style="margin: 0 auto; font-style: italic; color: var(--mid); font-size: 15px; border-left: 4px solid var(--secondary); padding-left: 16px; text-align: left; max-width: 720px;">
+        Dengan keterbatasan dana yang ada dan urgency kami harus segera pindah pertengahan Juni '26, kami memutuskan memanfaatkan sumber daya hutan bambu dengan mengolahnya menjadi saung bambu dan pagar bambu keliling. Ini mungkin tidak ideal — tapi setidaknya untuk 3–5 tahun ke depan, kami akan aman dan punya rumah permanent tanpa teror untuk diusir.
+      </p>
     </div>
-    <div class="shelter-imgs">
-      <div>
-        <div class="shelter-img-wrap">
-          <img src="https://res.cloudinary.com/dvigvyoxo/image/upload/f_auto,q_auto,w_1200/v1777894207/designsaung_is5ir6.jpg" alt="Bamboo Shelter Hut Design" loading="lazy">
-        </div>
-        <p class="shelter-caption">Bamboo Shelter Hut — Design</p>
+
+    <!-- 4 new bamboo shelter photos grid -->
+    <div class="construction-grid" style="margin-top: 32px;">
+      <div class="construction-img-wrap">
+        <img src="https://res.cloudinary.com/diylz44cu/image/upload/q_auto/f_auto/v1780974583/IMG-20260603-WA0014_t6ogg2.jpg" alt="Bamboo Shelter" loading="lazy">
       </div>
+      <div class="construction-img-wrap">
+        <img src="https://res.cloudinary.com/diylz44cu/image/upload/q_auto/f_auto/v1780974582/IMG-20260603-WA0023_imtuiy.jpg" alt="Bamboo Shelter" loading="lazy">
+      </div>
+      <div class="construction-img-wrap">
+        <img src="https://res.cloudinary.com/diylz44cu/image/upload/q_auto/f_auto/v1780974581/IMG-20260603-WA0011_eyoysj.jpg" alt="Bamboo Shelter" loading="lazy">
+      </div>
+      <div class="construction-img-wrap">
+        <img src="https://res.cloudinary.com/diylz44cu/image/upload/q_auto/f_auto/v1780974581/IMG-20260603-WA0013_fbqelj.jpg" alt="Bamboo Shelter" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Keep gmaps -->
+    <div class="shelter-imgs" style="margin-top: 28px; grid-template-columns: 1fr;">
       <div>
         <div class="shelter-img-wrap">
           <img src="https://res.cloudinary.com/dvigvyoxo/image/upload/f_auto,q_auto,w_1200/v1777894208/lokasi_mcbvcz.jpg" alt="Site Location Map" loading="lazy">
         </div>
-        <p class="shelter-caption">Site Location — Bogor Regency</p>
+        <p class="shelter-caption">📍 Site Location — Kalongliud Village, Nanggung, Bogor Regency</p>
       </div>
     </div>
   </div>
@@ -1074,6 +1090,40 @@ footer span { font-weight: 700; color: var(--secondary); }
           <div class="vid-caption">🎬 Update: 12 May 2026 — Full Perimeter Fence Installed</div>
         </div>
 
+        <div class="vid-slide">
+          <video muted loop playsinline preload="metadata">
+            <source src="https://res.cloudinary.com/diylz44cu/video/upload/q_auto/f_auto/v1780316238/lv_0_20260601191331_o0gukz.mp4" type="video/mp4">
+          </video>
+          <div class="vid-caption">🎬 Update: 01 Jun 2026 — On-Site Progress</div>
+        </div>
+
+        <div class="vid-slide">
+          <video muted loop playsinline preload="metadata">
+            <source src="https://res.cloudinary.com/diylz44cu/video/upload/q_auto/f_auto/v1780316244/lv_0_20260601191140_gapeai.mp4" type="video/mp4">
+          </video>
+          <div class="vid-caption">🎬 Update: 01 Jun 2026 — Sanctuary Taking Shape</div>
+        </div>
+
+        <div class="vid-slide">
+          <img src="https://res.cloudinary.com/diylz44cu/image/upload/q_auto/f_auto/v1780974582/IMG-20260603-WA0019_1_ggsdfn.jpg" alt="Construction Update" loading="lazy">
+          <div class="vid-caption">📸 03 Jun 2026 — Construction Progress</div>
+        </div>
+
+        <div class="vid-slide">
+          <img src="https://res.cloudinary.com/diylz44cu/image/upload/q_auto/f_auto/v1780974582/IMG-20260603-WA0017_khuqpq.jpg" alt="Construction Update" loading="lazy">
+          <div class="vid-caption">📸 03 Jun 2026 — Bamboo Structure Going Up</div>
+        </div>
+
+        <div class="vid-slide">
+          <img src="https://res.cloudinary.com/diylz44cu/image/upload/q_auto/f_auto/v1780934459/IMG-20260603-WA0020_gslcdx.jpg" alt="Construction Update" loading="lazy">
+          <div class="vid-caption">📸 03 Jun 2026 — Building the Sanctuary</div>
+        </div>
+
+        <div class="vid-slide">
+          <img src="https://res.cloudinary.com/diylz44cu/image/upload/q_auto/f_auto/v1780934458/IMG-20260603-WA0030_asllrb.jpg" alt="Construction Update" loading="lazy">
+          <div class="vid-caption">📸 03 Jun 2026 — Foundations & Framework</div>
+        </div>
+
         <button class="vid-arrow vid-arrow-right" id="vidNext">&#8594;</button>
       </div>
       <div class="vid-dots" id="vidDots"></div>
@@ -1336,7 +1386,8 @@ footer span { font-weight: 700; color: var(--secondary); }
 (function() {
   const videos = [
     'https://res.cloudinary.com/diylz44cu/video/upload/q_auto/f_auto/v1780932632/VID-20260608-WA0035_x8zugk.mp4',
-    'https://res.cloudinary.com/diylz44cu/video/upload/q_auto/f_auto/v1780932633/VID-20260608-WA0034_wmc30r.mp4'
+    'https://res.cloudinary.com/diylz44cu/video/upload/q_auto/f_auto/v1780932633/VID-20260608-WA0034_wmc30r.mp4',
+    'https://res.cloudinary.com/diylz44cu/video/upload/q_auto/f_auto/v1780975280/Perjalanan_Joy_dari_Mulai_Rescue_sampe_berhasil_di_bawa_pulang.._menjalani_1_x_amputasi_dua_kaki_xamzoc.mp4'
   ];
   let current = 0;
   const heroVid = document.getElementById('heroVideo');
