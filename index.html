@@ -144,9 +144,18 @@ section { padding: 80px 32px; }
 
 /* ═══ WHY WE LEFT ═══ */
 .why-section { background: var(--white); }
-.why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .why-video-wrap { border-radius: 16px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
 .why-video-wrap video { width: 100%; display: block; }
+/* WHY SECTION column order: video left on desktop, video below title on mobile */
+.why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.why-video-col { order: 1; }
+.why-text-col  { order: 2; }
+
+@media (max-width: 768px) {
+  .why-inner { grid-template-columns: 1fr; gap: 28px; }
+  .why-video-col { order: 2; }
+  .why-text-col  { order: 1; }
+}
 .timeline-mini { margin-top: 28px; }
 .tl-mini-item { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
 .tl-mini-dot { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: white; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
@@ -570,7 +579,14 @@ footer span { font-weight: 700; color: var(--secondary); }
 <!-- ═══ WHY WE HAD TO LEAVE ═══ -->
 <section class="why-section" id="why">
   <div class="container why-inner">
-    <div class="fade-up">
+    <!-- VIDEO: order-1 on desktop (left), order-1 on mobile (top after title) -->
+    <div class="why-video-wrap fade-up why-video-col">
+      <video autoplay muted loop playsinline style="width:100%; display:block;">
+        <source src="https://res.cloudinary.com/diylz44cu/video/upload/q_auto/f_auto/v1780926878/lv_0_20260608205304_b0alkm.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- TEXT: order-2 on desktop (right), order-2 on mobile (below video) -->
+    <div class="fade-up why-text-col">
       <span class="section-label">📋 The Story</span>
       <h2 class="section-title">From a Rented Shelter to <span>a Forever Home</span></h2>
       <p class="section-desc" style="margin-bottom: 24px;">For six years, Omah Ogel operated from a rented property in Depok, West Java. It became a safe haven for rescued animals who had nowhere else to go.</p>
@@ -601,11 +617,6 @@ footer span { font-weight: 700; color: var(--secondary); }
           </div>
         </div>
       </div>
-    </div>
-    <div class="why-video-wrap fade-up">
-      <video autoplay muted loop playsinline style="width:100%; display:block;">
-        <source src="https://res.cloudinary.com/diylz44cu/video/upload/q_auto/f_auto/v1780926878/lv_0_20260608205304_b0alkm.mp4" type="video/mp4">
-      </video>
     </div>
   </div>
 </section>
